@@ -57,3 +57,8 @@ button:disabled{
   color: white;
   cursor: not-allowed;
 }
+
+.h1{
+  color: black;
+  font-size: 3rem;
+}

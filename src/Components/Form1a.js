@@ -1,4 +1,5 @@
 import React from 'react'
+import Date from './Date'
 
 export default function Form1a() {
   return (
@@ -7,35 +8,35 @@ export default function Form1a() {
           <div className='btn'>General 2/3</div>
         </header>
         <form>
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
+            <div>
+                <Date/>
 
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
+                <Date/>
 
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
 
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
+                
+            </div>
             
-            <textarea placeholder='Comments'/>
+            <div>
+                <input 
+                    type="text" 
+                    placeholder="Email address"
+                    className="form--input"
+                    name= "email"
+                />
+
+                <input 
+                    type="text" 
+                    placeholder="Email address"
+                    className="form--input"
+                    name= "email"
+                />
+                
+                <textarea placeholder='Comments'/>
+
+            </div>
+
+            
     
             <div>
                 <button 

@@ -1,6 +1,7 @@
 import React from "react"
 import Types from "./Pages/Types";
 import General from "./Pages/General";
+import Teams from "./Pages/Teams";
 import {Routes, Route} from "react-router-dom"
 
 function App() {
