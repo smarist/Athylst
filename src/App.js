@@ -1,14 +1,15 @@
-import React, {useContext} from "react"
-import Filter from "./Components/Filter";
+import React from "react"
+import Types from "./Pages/Types";
+import General from "./Pages/General";
 import {Routes, Route} from "react-router-dom"
-import { Context } from "./Context";
 
 function App() {
-  const {theme} = useContext(Context)
   return (
     <div className="app">
-      <Filter/>
-        
+      <Routes>
+          <Route path="/"  exact element={<General/>}/>  
+          <Route path="form1"/>    
+        </Routes>   
     </div>
   );
 }
