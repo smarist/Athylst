@@ -12,7 +12,38 @@ body{
   height: 100vh;
 }
 
+.flex-row{
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
 
+.flex-col{
+  display: flex;
+  flex-flow: column;
+  border: 2px solid red;
+}
+
+.block{
+  margin-top: 2rem;
+}
+
+.width{
+  width: 80%;
+}
+
+.comments{ 
+  height: 25rem;
+}
+
+.p{
+  padding: 2rem ;
+  margin-left: auto;
+  margin-left: auto;
+}
 select{
   background: white;
   color: black;
@@ -39,7 +70,16 @@ option:first {
   align-items: center;
   margin-left: auto;
   margin-top: 35rem;
+}
 
+.filter-btn1{
+  display: flex;
+  gap: 1rem;
+  width: auto;
+  border: 2px solid red;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 2rem;
 }
 
 .btn{
@@ -47,6 +87,8 @@ option:first {
   color: white;
   border: none;
   padding: 0.5rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
   font-family: 'Nunito Sans', sans-serif;
   font-size: medium;
   cursor: pointer;
@@ -58,7 +100,56 @@ button:disabled{
   cursor: not-allowed;
 }
 
-.h1{
-  color: black;
-  font-size: 3rem;
+
+.form-div{
+  flex-basis: 40%;
 }
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-family: 'Inter', sans-serif;
+}
+
+.max{
+  width: 40%;
+  margin-bottom: auto;
+}
+
+.box1, .box2{
+  width: 80%;
+  border: 2px solid red;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box2{
+  margin-top: 10rem;
+}
+
+.mt{
+  margin-top: 7rem;
+}
+
+.teams{
+  width: 100%;
+}
+
+.line{
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left, .right{
+  border-top: 2px solid black;
+  width: 40%;
+}
+

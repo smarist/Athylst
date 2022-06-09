@@ -22,7 +22,7 @@ export default function Filter() {
 
 
       <div className="filter-btn">
-        <Link to="#"> <button className="btn" disabled={!marchType}>Next</button></Link>
+        <Link to="/general"> <button className="btn" disabled={!marchType}>Next</button></Link>
        
       </div>
     </div>

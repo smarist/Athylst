@@ -1,49 +1,95 @@
-import React from 'react'
+import React, {useContext} from "react"
+import {Context} from "../Context"
+import {Link} from 'react-router-dom'
+import Date from './Date'
+
 
 export default function Form1b() {
+    const {formData, setFormData, dateDate, setDateData} = useContext(Context)
+
+    function handleChange(e){
+        const {name, value} = e.target
+      
+        setFormData(prevFormData => {
+          return {
+            ...prevFormData,
+            [name]: value
+          }
+        }
+        )
+    }
+    
+    console.log(formData)
+
   return (
     <div>
         <header>
           <div className='btn'>General 2/3</div>
         </header>
-        <form>
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
+        <form className="flex-col p">
+            <div className="flex-row form-div">
+                <div className="flex-col max">
+                    <Date
+                        placeholder={"Start Date & Time"}
+                        name= "startDateAndTime"
+                        value= {formData.startDateAndTime}
+                        onChange={handleChange}
+                        className="width"
+                    />
 
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
+                    <input 
+                        type="text" 
+                        placeholder="March Location"
+                        className="block width"
+                        name= "matchLocation"
+                        value= {formData.matchLoaction}
+                        onChange={handleChange}
+                />
 
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
+                    <input 
+                        type="text" 
+                        placeholder="Tournament Name"
+                        className="block width"
+                        name= "tournamentName"
+                        value= {formData.tournamentName}
+                        onChange={handleChange}
+                    />
+                    
+                </div>
 
-            <input 
-                type="text" 
-                placeholder="Email address"
-                className="form--input"
-                name= "email"
-            />
-            
-            <textarea/>
-    
-            <div>
+                <div className="flex-col form-div">
+                    <Date
+                        placeholder={"End Date & Time"}
+                        name= "endDateAndTime"
+                        value= {formData.endDateAndTime}
+                        onChange={handleChange}
+                        className="width"
+                    />
+
+                    <textarea
+                        placeholder="comments"
+                        name= "comments"
+                        value= {formData.comments}
+                        onChange={handleChange}
+                        className="width block comments"
+                    />
+                    
+                </div>
+
+            </div>
+
+            <div className="filter-btn1">
+            <Link to = "/">
                 <button 
                 className="btn"> Back
                 </button>
+            </Link>
+
+            <Link to = "/teams">
                 <button 
                 className="btn"> Next
                 </button>
+            </Link>
             </div>
         </form>
     </div>
