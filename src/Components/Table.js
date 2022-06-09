@@ -2,7 +2,7 @@ import React, {useContext} from "react"
 import {Context} from "../Context"
 
 export default function Table() {
-    const {formData, matchType} = useContext(Context)
+    const {formData, marchType} = useContext(Context)
 
   return (
     <div className="tab">
@@ -20,7 +20,7 @@ export default function Table() {
         <tr>
           <td>{formData.teamOneName}</td>
           <td>{formData.teamTwoName}</td>
-          <td>{matchType}</td>
+          <td>{marchType}</td>
           <td>{formData.tournamentName}</td>
           <td>{formData.startDateAndTime}</td>
           <td>{formData.endDateAndTime}</td>
