@@ -30,8 +30,8 @@ export default function Form1a() {
           <div className='btn'>General 2/3</div>
         </header>
         <form className="flex-col p">
-            <div className="flex-row form-div">
-                <div className="flex-col max">
+            <div className="flex-row form-div md">
+                <div className="flex-col max p">
                     <Date
                         placeholder={"Start Date & Time"}
                         name= {"startDateAndTime"}
@@ -50,7 +50,7 @@ export default function Form1a() {
 
                 </div>
             
-                <div className="flex-col form-div">
+                <div className="flex-col form-div p">
                     <Date
                         placeholder={"End Date & Time"}
                         name= {"endDateAndTime"}
@@ -65,6 +65,7 @@ export default function Form1a() {
                     value= {formData.comments}
                     onChange={handleChange}
                     className="width comments block"
+                    maxLength={1000}
                 />
                 </div>
 

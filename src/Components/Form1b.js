@@ -27,8 +27,8 @@ export default function Form1b() {
           <div className='btn'>General 2/3</div>
         </header>
         <form className="flex-col p">
-            <div className="flex-row form-div">
-                <div className="flex-col max">
+            <div className="flex-row md">
+                <div className="flex-col form-div max p">
                     <Date
                         placeholder={"Start Date & Time"}
                         name= "startDateAndTime"
@@ -57,7 +57,7 @@ export default function Form1b() {
                     
                 </div>
 
-                <div className="flex-col form-div">
+                <div className="flex-col form-div p">
                     <Date
                         placeholder={"End Date & Time"}
                         name= "endDateAndTime"
@@ -72,6 +72,7 @@ export default function Form1b() {
                         value= {formData.comments}
                         onChange={handleChange}
                         className="width block comments"
+                        maxLength={1000}
                     />
                     
                 </div>

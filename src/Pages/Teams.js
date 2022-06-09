@@ -92,7 +92,7 @@ export default function Teams() {
                 </button>
             </Link>
 
-            <Link to = "#">
+            <Link to = "/data">
                 <button 
                 className="btn"> Submit
                 </button>
