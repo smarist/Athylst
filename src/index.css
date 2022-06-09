@@ -157,13 +157,23 @@ input {
 }
 
 table {
-  border: 2px solid forestgreen;
+  border: 2px solid red;
   width: 100%;
   height: 200px;
 }
+
+.tab-head{
+  background: red;
+  color: white;
+}
+
+.tab-body{
+  background: white;
+  color: black;
+}
   
 th {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
   
 td {

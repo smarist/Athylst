@@ -7,7 +7,7 @@ export default function Table() {
   return (
     <div className="tab">
         <table>
-        <tr>
+        <tr className="tab-head">
           <th>Team 1</th>
           <th>Team 2</th>
           <th>March Type</th>
@@ -17,7 +17,7 @@ export default function Table() {
           <th>Location</th>
           <th>Comments</th>
         </tr>
-        <tr>
+        <tr className="tab-body">
           <td>{formData.teamOneName}</td>
           <td>{formData.teamTwoName}</td>
           <td>{marchType}</td>
