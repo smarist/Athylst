@@ -2,11 +2,10 @@ import React, {useContext} from "react"
 import {Context} from "../Context"
 import Date from './Date'
 import {Link} from 'react-router-dom'
-import moment from 'moment';
 
 
 export default function Form1a() {
-    const {formData, setFormData, errors, setErrors} = useContext(Context)
+    const {formData, setFormData} = useContext(Context)
 
     function handleChange(e){
         const {name, value} = e.target
