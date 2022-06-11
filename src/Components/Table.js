@@ -18,8 +18,8 @@ export default function Table() {
           <th>Comments</th>
         </tr>
         <tr className="tab-body">
-          <td>{formData.teamOneName}</td>
-          <td>{formData.teamTwoName}</td>
+          <td>{formData.teamOneName} ({formData.teamOnePosition})</td>
+          <td>{formData.teamTwoName} ({formData.teamTwoPosition})</td>
           <td>{marchType}</td>
           <td>{formData.tournamentName}</td>
           <td>{formData.startDateAndTime}</td>

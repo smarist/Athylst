@@ -5,7 +5,7 @@ import Date from './Date'
 
 
 export default function Form1b() {
-    const {formData, setFormData, dateDate, setDateData} = useContext(Context)
+    const {formData, setFormData, errors, setErrors} = useContext(Context)
 
     function handleChange(e){
         const {name, value} = e.target

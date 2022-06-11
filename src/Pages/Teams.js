@@ -7,6 +7,7 @@ export default function Teams() {
 
     const {formData, setFormData} = useContext(Context)
 
+
     function handleChange(e){
         const {name, value} = e.target
       
@@ -19,8 +20,7 @@ export default function Teams() {
         )
     }
 
-    console.log(formData)
-
+    
   return (
     <div>
         <header>

@@ -6,7 +6,7 @@ import moment from 'moment';
 
 
 export default function Form1a() {
-    const {formData, setFormData, setDateData, dateData} = useContext(Context)
+    const {formData, setFormData, errors, setErrors} = useContext(Context)
 
     function handleChange(e){
         const {name, value} = e.target
