@@ -8,12 +8,14 @@ import {Routes, Route} from "react-router-dom"
 function App() {
   return (
     <div className="app">
-      <Routes>
+      <form>
+        <Routes>
           <Route path="/"  exact element={<Types/>}/>  
           <Route path="/general" element={<General/>}/>
           <Route path="/teams" element={<Teams/>}/>
-          <Route path="/data" element={<Data/>}/>    
+          <Route path="/data" element={<Data/>}/>   
         </Routes>   
+        </form>   
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function Filter() {
         onChange={(e)=> setMarchType(e.target.value)}
         placeholder= "March Type"
         >
-            <option value="" disabled hidden>March Type</option>
+            <option value="" disabled hidden className="first">March Type</option>
             <option value="friendly">Friendly</option>
             <option value="tournament">Tournament</option>
         </select>

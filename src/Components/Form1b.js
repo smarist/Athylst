@@ -26,7 +26,7 @@ export default function Form1b() {
         <header>
           <div className='btn'>General 2/3</div>
         </header>
-        <form className="flex-col p">
+        <div className="flex-col p">
             <div className="flex-row md">
                 <div className="flex-col form-div max p">
                     <Date
@@ -92,7 +92,7 @@ export default function Form1b() {
                 </button>
             </Link>
             </div>
-        </form>
+        </div>
     </div>
   )
 }

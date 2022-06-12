@@ -3,8 +3,6 @@ body{
   margin: 0;
   padding: 0;
   background: inherit;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 .app{
@@ -43,6 +41,7 @@ body{
   margin-left: auto;
   margin-left: auto;
 }
+
 select{
   background: white;
   color: black;
@@ -63,11 +62,12 @@ option:first {
 }
 
 .filter-btn{
+  margin-right: 1rem;
   display: flex;
   width: 20%;
   align-items: center;
   margin-left: auto;
-  margin-top: 35rem;
+  margin-top: 30rem;
 }
 
 .filter-btn1{
@@ -77,6 +77,8 @@ option:first {
   align-items: center;
   margin-left: auto;
   margin-top: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .btn{
@@ -89,6 +91,7 @@ option:first {
   font-family: 'Nunito Sans', sans-serif;
   font-size: medium;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 button:disabled{
@@ -199,5 +202,28 @@ td {
 
   .comments{
     width: 100%;
+  }
+
+  select{
+    background: white;
+    color: black;
+    font-size: 1rem;
+    padding: 0.1rem;
+    width: 10rem;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 5px;
+  }
+
+  option{
+    width: auto;
+  }
+
+  .first{
+    margin-top: 2rem;
+  }
+
+  .box1, .box2{
+    display: flex;
+    flex-direction: column;
   }
 }

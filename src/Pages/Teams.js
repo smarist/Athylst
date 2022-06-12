@@ -26,7 +26,7 @@ export default function Teams() {
         <header>
           <div className='btn'>Teams 3/3</div>
         </header>
-        <form className="flex-col">
+        <div className="flex-col">
             <div className="flex-row box1">
                 <input 
                     type="text" 
@@ -98,7 +98,7 @@ export default function Teams() {
                 </button>
             </Link>
             </div>
-        </form>
+        </div>
     </div>
   )
 }
