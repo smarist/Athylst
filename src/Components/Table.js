@@ -3,7 +3,7 @@ import {Context} from "../Context"
 import Moment from "react-moment";
 
 export default function Table() {
-    const {formData, marchType} = useContext(Context)
+    const {formData} = useContext(Context)
 
   return (
     <div className="tab">
@@ -21,7 +21,7 @@ export default function Table() {
         <tr className="tab-body">
           <td>{formData.teamOneName} ({formData.teamOnePosition})</td>
           <td>{formData.teamTwoName} ({formData.teamTwoPosition})</td>
-          <td>{marchType}</td>
+          <td>{formData.marchType}</td>
           <td>{formData.tournamentName}</td>
           <td><Moment format="YYYY-MM-DD HH:mm">{formData.startDateAndTime}</Moment></td>
           <td><Moment format="YYYY-MM-DD HH:mm">{formData.endDateAndTime}</Moment></td>

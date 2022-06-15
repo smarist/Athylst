@@ -3,15 +3,21 @@ import {Context} from "../Context"
 import {Link} from "react-router-dom"
 
 export default function Filter() {
-  const {marchType, setMarchType} = useContext(Context)
+  const {formData, setFormData} = useContext(Context)
 
-  console.log(marchType)
+  console.log(formData.marchType)
   return (
     <div>
       <div className="pt">
         <select 
-        value={marchType}
-        onChange={(e)=> setMarchType(e.target.value)}
+        value={formData.marchType}
+        onChange={(e)=> setFormData(prevFormData => {
+          return {
+          ...prevFormData,
+          marchType: e.target.value
+          }
+      })
+      }
         placeholder= "March Type"
         >
             <option value="" disabled hidden className="first">March Type</option>
@@ -22,7 +28,7 @@ export default function Filter() {
 
 
       <div className="filter-btn">
-        <Link to="/general"> <button className="btn" disabled={!marchType}>Next</button></Link>
+        <Link to="/general"> <button className="btn" disabled={!formData.marchType}>Next</button></Link>
        
       </div>
     </div>

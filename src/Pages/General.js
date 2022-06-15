@@ -5,11 +5,11 @@ import {Context} from "../Context"
 
 
 export default function General () {
-    const {marchType} = useContext(Context)
+    const {formData} = useContext(Context)
 
   return (
     <div>
-        {marchType === "friendly"? 
+        {formData.marchType === "friendly"? 
          <Form1a/> :
          <Form1b/>
         }

@@ -4,8 +4,8 @@ import React, {useState} from "react"
 const Context = React.createContext()
 
 function ContextProvider({children}) {
-    const [marchType, setMarchType] = useState("")
     const [formData, setFormData] = useState({
+        marchType: "",
         startDateAndTime: "",
         endDateAndTime: "",
         matchLocation: "",
@@ -22,7 +22,7 @@ function ContextProvider({children}) {
     
     return (
         <Context.Provider 
-        value={{marchType, setMarchType, formData, setFormData}}>
+        value={{formData, setFormData}}>
             {children}
         </Context.Provider>
     )
