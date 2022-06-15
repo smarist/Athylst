@@ -2,6 +2,7 @@ import React, {useContext} from "react"
 import {Context} from "../Context"
 import {Link} from 'react-router-dom'
 import Date from './Date'
+import moment from "moment"
 
 
 export default function Form1b() {
@@ -29,11 +30,18 @@ export default function Form1b() {
         <div className="flex-col p">
             <div className="flex-row md">
                 <div className="flex-col form-div max p">
+                    
                     <Date
                         placeholder={"Start Date & Time"}
                         name= "startDateAndTime"
                         value= {formData.startDateAndTime}
-                        onChange={handleChange}
+                        onChange={(e) => setFormData(prevFormData => {
+                            return {
+                              ...prevFormData,
+                              startDateAndTime: moment(new Date(e.target.value)).format("YYYY-MM-DD")
+                            }
+                          })
+                        }
                         className="width"
                     />
 
@@ -62,9 +70,15 @@ export default function Form1b() {
                         placeholder={"End Date & Time"}
                         name= "endDateAndTime"
                         value= {formData.endDateAndTime}
-                        onChange={handleChange}
+                        onChange={(e) => setFormData(prevFormData => {
+                            return {
+                            ...prevFormData,
+                            endDateAndTime: moment(new Date(e.target.value)).format("YYYY-MM-DD")
+                            }
+                        })
+                        }
                         className="width"
-                    />
+                    />    
 
                     <textarea
                         placeholder="comments"

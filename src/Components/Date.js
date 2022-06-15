@@ -6,7 +6,7 @@ export default function NativePickers(props) {
       <TextField
         id="datetime-local"
         label={props.placeholder}
-        type="datetime-local"
+        type="date"
         defaultValue={""}
         name={props.name}
         sx={{ width: 250 }}

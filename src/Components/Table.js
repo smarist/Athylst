@@ -1,5 +1,6 @@
 import React, {useContext} from "react"
 import {Context} from "../Context"
+import Moment from "react-moment";
 
 export default function Table() {
     const {formData, marchType} = useContext(Context)
@@ -22,8 +23,8 @@ export default function Table() {
           <td>{formData.teamTwoName} ({formData.teamTwoPosition})</td>
           <td>{marchType}</td>
           <td>{formData.tournamentName}</td>
-          <td>{formData.startDateAndTime}</td>
-          <td>{formData.endDateAndTime}</td>
+          <td><Moment format="DD-MM-YYYY">{formData.startDateAndTime}</Moment></td>
+          <td><Moment format="DD-MM-YYYY">{formData.endDateAndTime}</Moment></td>
           <td>{formData.matchLocation}</td>
           <td>{formData.comments}</td>
 
