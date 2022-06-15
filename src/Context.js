@@ -6,8 +6,8 @@ const Context = React.createContext()
 function ContextProvider({children}) {
     const [marchType, setMarchType] = useState("")
     const [formData, setFormData] = useState({
-        startDateAndTime: new Date(),
-        endDateAndTime: new Date("YYYY-MM-DD"),
+        startDateAndTime: "",
+        endDateAndTime: "",
         matchLocation: "",
         comments: "",
         tournamentName: "",
