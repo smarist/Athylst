@@ -1,9 +1,7 @@
 import React, {useContext} from "react"
 import {Context} from "../Context"
 import {Link} from 'react-router-dom'
-import Date from './Date'
-import moment from "moment"
-
+import TextField from '@mui/material/TextField'
 
 export default function Form1b() {
     const {formData, setFormData} = useContext(Context)
@@ -31,19 +29,26 @@ export default function Form1b() {
             <div className="flex-row md">
                 <div className="flex-col form-div max p">
                     
-                    <Date
-                        placeholder={"Start Date & Time"}
+                    <TextField
+                        className="width"
+                        id="datetime-local"
+                        label={"Start Date & Time"}
                         name= "startDateAndTime"
-                        value= {formData.startDateAndTime}
+                        type="datetime-local"
+                        value={formData.startDateAndTime}
                         onChange={(e) => setFormData(prevFormData => {
                             return {
-                              ...prevFormData,
-                              startDateAndTime: moment(new Date(e.target.value)).format("YYYY-MM-DD")
+                            ...prevFormData,
+                            startDateAndTime: e.target.value
                             }
-                          })
+                        })
                         }
-                        className="width"
+                        sx={{ width: 250 }}
+                        InputLabelProps={{
+                        shrink: true,
+                        }}
                     />
+
 
                     <input 
                         type="text" 
@@ -66,19 +71,25 @@ export default function Form1b() {
                 </div>
 
                 <div className="flex-col form-div p">
-                    <Date
-                        placeholder={"End Date & Time"}
-                        name= "endDateAndTime"
-                        value= {formData.endDateAndTime}
-                        onChange={(e) => setFormData(prevFormData => {
-                            return {
-                            ...prevFormData,
-                            endDateAndTime: moment(new Date(e.target.value)).format("YYYY-MM-DD")
+                    <TextField
+                            className="width"
+                            id="datetime-local"
+                            label={"End Date & Time"}
+                            name= "endDateAndTime"
+                            type="datetime-local"
+                            value={formData.endDateAndTime}
+                            onChange={(e) => setFormData(prevFormData => {
+                                return {
+                                ...prevFormData,
+                                endDateAndTime: e.target.value
+                                }
+                            })
                             }
-                        })
-                        }
-                        className="width"
-                    />    
+                            sx={{ width: 250 }}
+                            InputLabelProps={{
+                            shrink: true,
+                            }}
+                    /> 
 
                     <textarea
                         placeholder="comments"

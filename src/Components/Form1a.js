@@ -1,8 +1,6 @@
 import React, {useContext} from "react"
 import {Context} from "../Context"
-import Date from './Date'
 import {Link} from 'react-router-dom'
-import moment from "moment"
 import TextField from '@mui/material/TextField'
 
 
@@ -38,10 +36,10 @@ export default function Form1a() {
 
                 <TextField
                     className="width"
-                    id="date-local"
+                    id="datetime-local"
                     label={"Start Date & Time"}
                     name= "startDateAndTime"
-                    type="date"
+                    type="datetime-local"
                     value={formData.startDateAndTime}
                     onChange={(e) => setFormData(prevFormData => {
                         return {
@@ -75,7 +73,7 @@ export default function Form1a() {
                         id="datetime-local"
                         label={"End Date & Time"}
                         name= "endDateAndTime"
-                        type="date"
+                        type="datetime-local"
                         value={formData.endDateAndTime}
                         onChange={(e) => setFormData(prevFormData => {
                             return {
